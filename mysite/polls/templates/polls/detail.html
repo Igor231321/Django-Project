@@ -1,0 +1,17 @@
+{% extends "polls/base.html" %}
+
+{% block content %}
+<button class="btn btn-primary">
+    <a href="{% url 'polls:new_choice' question.id %}">Добавить новый ответ</a>
+</button>
+
+<h1>Вопрос: {{ question }}</h1>
+
+<h5>Ответы:
+    {% if choice %}
+        {{ choice }}
+    {% else %}
+        нет темы
+    {% endif %}
+</h5>
+{% endblock %}

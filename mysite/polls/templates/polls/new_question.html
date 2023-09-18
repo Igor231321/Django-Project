@@ -1,0 +1,14 @@
+{% extends "polls/base.html" %}
+
+{% block title %} Форма по добавлению вопроса {% endblock title %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма по добавлению вопроса:</h1>
+        <form action="{% url 'polls:new_question' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Добавить запись</button>
+        </form>
+    </div>
+{% endblock content %}

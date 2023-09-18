@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+    color: black !important;
+}
+
+h1, h2 {
+    text-align: center;
+    color: dark;
+}
+
+p {
+    text-align: center;
+    color: grey;
+    font-family: verdana;
+    font-size: 20px
+}
+
+span {
+    color: gray
+}
+
+hr {
+    color: white
+}
+
+form {
+    margin-left: 37.1%;
+    margin-top: 60px;
+    width: 300px;
+}
+
+img {
+    widht: 10200px;
+    widht: 100%;
+    max_widht: 500px;
+}

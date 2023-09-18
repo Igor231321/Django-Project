@@ -1,0 +1,17 @@
+{% extends "polls/base.html" %}
+
+{% block title %} Вопросы на сайте {% endblock %}
+
+{% block content %}
+    <button class="btn btn-success">
+        <a href="{% url 'polls:new_question' %}" title="Создать новый вопрос">
+            Создать новый вопрос</a>
+    </button>
+
+    <h2>Вопросы на сайте</h2>
+    <div>
+        {% for question in questions %}
+            <p><a href="{% url 'polls:question_detail' question.id %}" title="Подробнее">{{ question }}</a></p>
+        {% endfor %}
+    </div>
+{% endblock content %}

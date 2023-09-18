@@ -1,0 +1,28 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловать на главную страницу сайта</h1>
+    <p id="igor_developer">Первый <br><em>абзац</em>.</p>
+    <a href="https://www.youtube.com/" title="YouTube" target="_blank"><em>Ссылка на ютуб</em></a>
+    <br>
+
+    <ul>
+        <li>First elem</li>
+        <li>Two elem</li>
+        <li>Tree elem</li>
+    </ul>
+    <hr>
+    <!--Кнопка-->
+    <button class="btn btn-primary">
+        <a href="{% url 'polls:questions' %}">Перейти на страницу с вопросами</a>
+    </button>
+
+    <!--Кнопка 2 -->
+    <button class="btn btn-success">
+        <a href="{% url 'polls:new_question' %}" title="Создать новый вопрос">Создать новый вопрос</a>
+    </button>
+    <hr>
+
+{% endblock content %}
