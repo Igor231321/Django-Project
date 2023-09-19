@@ -10,17 +10,6 @@
     <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 </head>
 <body>
-    <!--Кнопка-->
-    <br>
-    <button class="btn btn-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-        <a href="{% url 'polls:index' %}">Главная страница</a>
-    </font></font>
-    </button>
-    <hr>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
-
+{% block content %}{% endblock %}
 </body>
 </html>

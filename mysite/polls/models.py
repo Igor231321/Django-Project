@@ -5,6 +5,9 @@ class Question(models.Model):
     question_text = models.CharField('Название вопроса', max_length=50)
     pub_date = models.DateTimeField('Дата публикации')
 
+    def get_absolute_url(self):
+        return f'/question/{self.id}'
+
     def __str__(self):
         return self.question_text
 

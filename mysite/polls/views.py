@@ -1,27 +1,29 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Question, Choice
 from .forms import QuestionForm, ChoiceForm
+from django.views import generic
 
 
-def index_page(request):
-    """Домашняя страница приложения Polls."""
-    return render(request, 'polls/index.html')
+class IndexView(generic.ListView):
+    template_name = "polls/index.html"
+    context_object_name = "questions_list"
+
+    def get_queryset(self):
+        """Возвращает список опубликованных вопросов."""
+        return Question.objects.order_by("-pub_date")[:5]
 
 
-def questions_page(request):
-    """Выводит список вопросов."""
-    questions_list = Question.objects.order_by("-pub_date")
-    context = {'questions': questions_list}
-    return render(request, 'polls/questions.html', context)
-
-
-def question_detail(request, question_id):
+class DetailView(generic.DetailView):
     """Выводит один вопрос."""
-    question = get_object_or_404(Question, pk=question_id)
-    choice = get_object_or_404(Choice, pk=question_id)
-    context = {'question': question,
-               'choice': choice}
-    return render(request, 'polls/detail.html', context)
+    model = Question
+    template_name = "polls/detail.html"
+
+
+class UpdateView(generic.UpdateView):
+    model = Question
+    template_name = "polls/new_question.html"
+
+    form_class = QuestionForm
 
 
 def question_create(request):
