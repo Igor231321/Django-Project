@@ -3,10 +3,7 @@ from django.db import models
 
 class Question(models.Model):
     question_text = models.CharField('Название вопроса', max_length=50)
-    pub_date = models.DateTimeField('Дата публикации')
-
-    def get_absolute_url(self):
-        return f'/question/{self.id}'
+    pub_date = models.DateTimeField('Дата публикации', auto_now_add=True)
 
     def __str__(self):
         return self.question_text

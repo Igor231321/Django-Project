@@ -8,9 +8,9 @@ urlpatterns = [
     # Домашняя страница.
     path("", views.IndexView.as_view(), name='index'),
     # Страница с подробной информацией по отдельной теме.
-    path('question/<int:id>/', views.DetailView.as_view(), name='question_detail'),
+    path('question/<int:id>/', views.question_detail, name='question_detail'),
     # Страница для Update
-    path('question/<int:pk>/update/', views.UpdateView.as_view(), name='question_update'),
+    path('question/<int:pk>/update/', views.QuestionUpdateView.as_view(), name='question_update'),
     # Страница для создания вопроса
     path('question/create/', views.question_create, name='new_question'),
     # Добавляет новую запись по конкретной теме.

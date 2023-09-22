@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Question, Choice
+from .models import Question
 from .forms import QuestionForm, ChoiceForm
+
 from django.views import generic
 
 
@@ -13,17 +14,21 @@ class IndexView(generic.ListView):
         return Question.objects.order_by("-pub_date")[:5]
 
 
-class DetailView(generic.DetailView):
-    """Выводит один вопрос."""
+# class DetailView(generic.DetailView):
+#     """Выводит один вопрос."""
+#     model = Question
+#     template_name = "polls/detail.html"
+
+def question_detail(request, id):
+    question = get_object_or_404(Question, pk=id)
+    return render(request, 'polls/detail.html', {"question": question})
+
+
+class QuestionUpdateView(generic.UpdateView):
     model = Question
-    template_name = "polls/detail.html"
+    template_name = 'polls/new_question.html'
 
-
-class UpdateView(generic.UpdateView):
-    model = Question
-    template_name = "polls/new_question.html"
-
-    form_class = QuestionForm
+    fields = ['question_text']
 
 
 def question_create(request):
