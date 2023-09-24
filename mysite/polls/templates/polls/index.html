@@ -11,10 +11,17 @@
 
 <h1>Добро пожаловать на главную страницу сайта!</h1>
 <ul>
-    {% for question in questions_list %}
-        <li>
-            <a href="{% url 'polls:question_detail' question.id %}" title="Подробнее о {{ question }}">{{ question }}</a>
-        </li>
-    {% endfor %}
+{% for question in questions_list %}
+    <li>
+        <h2>{{ question.question_text }}</h2>
+        <p>{{ question.pub_date }}</p>
+        <p><a href="{% url 'polls:question_detail' question.id %}">Узнать подробнее</a></p>
+        {% if not forloop.last %}
+        <hr>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li>Sorry, no have a question.</li>
+{% endfor %}
 </ul>
 {% endblock content %}
