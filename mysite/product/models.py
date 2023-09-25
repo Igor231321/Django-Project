@@ -6,5 +6,6 @@ class Product(models.Model):
     amount = models.IntegerField('Цена товара', default=0)
     description = models.TextField('Описание товара')
 
+
     def __str__(self):
         return self.title

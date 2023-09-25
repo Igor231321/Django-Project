@@ -4,6 +4,8 @@ from django.db import models
 class Question(models.Model):
     question_text = models.CharField('Название вопроса', max_length=50)
     pub_date = models.DateTimeField('Дата публикации', auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
+    is_published = models.BooleanField(default=True)
 
     def __str__(self):
         return self.question_text
