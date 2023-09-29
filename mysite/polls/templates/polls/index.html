@@ -15,7 +15,7 @@
     <li>
         <h2>{{ question.question_text }}</h2>
         <p>{{ question.pub_date }}</p>
-        <p><a href="{% url 'polls:question_detail' question.id %}">Узнать подробнее</a></p>
+        <p><a href="{% url 'question.get_absolute_url' %}">Узнать подробнее</a></p>
         {% if not forloop.last %}
         <hr>
         {% endif %}

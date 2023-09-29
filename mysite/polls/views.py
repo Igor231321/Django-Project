@@ -14,13 +14,8 @@ class IndexView(generic.ListView):
         return Question.objects.order_by("-pub_date")[:5]
 
 
-# class DetailView(generic.DetailView):
-#     """Выводит один вопрос."""
-#     model = Question
-#     template_name = "polls/detail.html"
-
-def question_detail(request, id):
-    question = get_object_or_404(Question, pk=id)
+def question_detail(request, question_slug):
+    question = get_object_or_404(Question, slug=question_slug)
     return render(request, 'polls/detail.html', {"question": question})
 
 

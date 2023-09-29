@@ -9,13 +9,14 @@ class ChoiceInline(admin.TabularInline):
 
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
-        ("Question information", {'fields': ['question_text']})
+        ("Question information", {'fields': ['question_text']}),
+        ("Slug", {'fields': ['slug']}),
     ]
     inlines = [ChoiceInline]
 
-    list_display = ['question_text', 'pub_date']
+    list_display = ['question_text', 'slug', 'pub_date']
     list_filter = ['pub_date']
-    search_fields = ['question_text']
+    search_fields = ['question_text', 'slug']
 
 
 admin.site.register(Question, QuestionAdmin)
