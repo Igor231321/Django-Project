@@ -11,12 +11,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Возвращает список опубликованных вопросов."""
-        return Question.objects.order_by("-pub_date")[:5]
-
-
-def question_detail(request, question_slug):
-    question = get_object_or_404(Question, slug=question_slug)
-    return render(request, 'polls/detail.html', {"question": question})
+        return Question.published.all()[:5]
 
 
 class QuestionUpdateView(generic.UpdateView):
@@ -24,6 +19,11 @@ class QuestionUpdateView(generic.UpdateView):
     template_name = 'polls/new_question.html'
 
     fields = ['question_text']
+
+
+def question_detail(request, question_slug):
+    question = get_object_or_404(Question, slug=question_slug)
+    return render(request, 'polls/detail.html', {"question": question})
 
 
 def question_create(request):

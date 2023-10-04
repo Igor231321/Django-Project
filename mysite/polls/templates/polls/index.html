@@ -10,18 +10,9 @@
 </button><br><br>
 
 <h1>Добро пожаловать на главную страницу сайта!</h1>
-<ul>
 {% for question in questions_list %}
-    <li>
-        <h2>{{ question.question_text }}</h2>
-        <p>{{ question.pub_date }}</p>
-        <p><a href="{% url 'question.get_absolute_url' %}">Узнать подробнее</a></p>
-        {% if not forloop.last %}
-        <hr>
-        {% endif %}
-    </li>
-    {% empty %}
-    <li>Sorry, no have a question.</li>
+    <h2>{{ question.question_text }}</h2>
+    <p>{{ question.pub_date }}</p>
+    <p><a href="{{ question.get_absolute_url }}">Узнать подробнее</a></p>
 {% endfor %}
-</ul>
 {% endblock content %}
