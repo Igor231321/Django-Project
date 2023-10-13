@@ -1,32 +1,49 @@
-a {
-    text-decoration: none;
-    color: black !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap');
 
+body {
+    background: #242424;
+}
 h1, h2 {
     text-align: center;
-    color: dark;
+    color: white;
+    font-family: 'Oswald', sans-serif;
 }
 
-p {
+hr {
+    color: whitesmoke;
+    height: 10px;
+}
+.menu li {
+    margin-right: 140px;
+}
+
+.main-pages {
     text-align: center;
     color: grey;
     font-family: verdana;
-    font-size: 20px
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
-span {
-    color: gray
+.box {
+    width: 1170px;
+    margin: 0 auto; /*позиционирование текста по центру*/    
 }
 
-form {
-    margin-left: 37.1%;
-    margin-top: 60px;
-    width: 300px;
+header a {
+    color:rgba(255, 217, 64, 0.979);
+    text-decoration: none;
 }
 
-img {
-    widht: 10200px;
-    widht: 100%;
-    max_widht: 500px;
+.menu {
+    display: flex;
 }
+
+.menu li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #44B78B;
+}
+

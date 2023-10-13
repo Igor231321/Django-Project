@@ -3,16 +3,32 @@
 {% block title %}Главная страница{% endblock %}
 
 {% block content %}
-<!--Кнопка 1 -->
-<br>
-<button class="btn btn-success">
-    <a href="{% url 'polls:new_question' %}" title="Создать новый вопрос">Создать новый вопрос</a>
-</button><br><br>
+<header id="header" class="header">
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="{% url 'polls:index' %}" title="Создать новый вопрос">Главная страница</a>
+            </li>       
+            <li>
+                <a href="{% url 'polls:new_question' %}" title="Создать новый вопрос">Новый вопрос</a>
+            </li>
+        </ul>       
+    </div>
 
-<h1>Добро пожаловать на главную страницу сайта!</h1>
-{% for question in questions_list %}
-    <h2>{{ question.question_text }}</h2>
-    <p>{{ question.pub_date }}</p>
-    <p><a href="{{ question.get_absolute_url }}">Узнать подробнее</a></p>
-{% endfor %}
+    <div class="center">
+        <h1>Добро пожаловать на главную страницу сайта!</h1>
+        <hr>
+        {% for question in questions_list %}
+            <h2>{{ question.question_text }}</h2>
+            <p class="main-pages">{{ question.pub_date }}</p>
+            <p class="main-pages"><a href="{{ question.get_absolute_url }}">Узнать подробнее</a></p>
+        {% endfor %}
+    </div>
+</header>
+
+<footer id="footer" class="footer">
+    <div class="box">
+        <h1>Заголовок блока</h1>
+    </div>
+</footer>
 {% endblock content %}
