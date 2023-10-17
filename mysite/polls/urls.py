@@ -13,6 +13,4 @@ urlpatterns = [
     path('question/<int:pk>/update/', views.QuestionUpdateView.as_view(), name='question_update'),
     # Страница для создания вопроса
     path('question/create/', views.question_create, name='new_question'),
-    # Добавляет новую запись по конкретной теме.
-    path('new_choice/<int:question_id>/', views.new_choice, name='new_choice'),
 ]

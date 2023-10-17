@@ -1,15 +1,11 @@
 {% extends "polls/base.html" %}
 
 {% block content %}
+<main>
     {% for elem in products %}
-        <div class="btn btn-dark">
-                <h5>Название товара: {{ elem.title }}</h5>
-                <h6>Цена товара: {{ elem.amount }} грн</h6>
-                <h6>Описание: {{ elem.description }}</h6>
-            </div>
-        <br><br>
+        <h5>Название товара: {{ elem.title }}</h5>
+        <h6>Цена товара: {{ elem.amount }} грн</h6>
+        <h6>Описание: {{ elem.description }}</h6>
     {% endfor %}
-    <div>
-
-    </div>
+</main>
 {% endblock %}

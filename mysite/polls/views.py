@@ -11,7 +11,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Возвращает список опубликованных вопросов."""
-        return Question.published.all()[:5]
+        return Question.published.all()[:3]
 
 
 class QuestionUpdateView(generic.UpdateView):
@@ -41,21 +41,3 @@ def question_create(request):
     context = {'form': form}
     return render(request, 'polls/new_question.html', context)
 
-
-def new_choice(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    if request.method != 'POST':
-        # Данные не отправились; создается пустая форма.
-        form = ChoiceForm()
-    else:
-        # Отправлены данные POST; обработать данные.
-        form = ChoiceForm(request.POST)
-        if form.is_valid():
-            new_choice = form.save(commit=False)
-            new_choice.question = question
-            new_choice.save()
-            return redirect('polls:questions')
-
-    # Вывести пустую или недействительную форму.
-    context = {'question': question, 'form': form}
-    return render(request, 'polls/new_choice.html', context)
