@@ -10,7 +10,23 @@
     <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 </head>
 <body>
-{% block content %}
-{% endblock %}
+    <aside id="aside" class="aside">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="{% url 'polls:index' %}" title="Создать новый вопрос">Главная страница</a>
+                </li>       
+                <li>
+                    <a href="{% url 'polls:new_question' %}" title="Создать новый вопрос">Новый вопрос</a>
+                </li>
+                <li>
+                    <a href="{% url 'polls:all_questions' %}" title="Посмотреть все вопросы">Посмотреть все вопросы</a>
+                </li>
+            </ul> 
+        </div>
+    </aside>
+
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

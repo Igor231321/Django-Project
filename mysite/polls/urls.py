@@ -13,4 +13,6 @@ urlpatterns = [
     path('question/<int:pk>/update/', views.QuestionUpdateView.as_view(), name='question_update'),
     # Страница для создания вопроса
     path('question/create/', views.question_create, name='new_question'),
+    # Страница для просмотра всех вопросов на сайте
+    path('all_questions/', views.AllQuestionsView.as_view(), name='all_questions')
 ]

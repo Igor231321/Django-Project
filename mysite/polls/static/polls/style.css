@@ -1,63 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap');
 body {
-    background: black; 
+    background: rgb(255, 255, 255); 
 }
-header {
-    background-color: #000000;
-    margin-right: 300px;
+aside {
+    background-color: #000000d0;
+    float: left;
+    height: 1204px;
+    width: 300px;
 }
-header a {
+
+.menu a {
+    text-decoration: none;
+    color: rgb(245, 177, 118);
+    font-size: 25px;
+}   
+
+.header a {
     color:rgba(255, 217, 64, 0.979);
     text-decoration: none;
+    font-size: 25px;
 }
 
-.menu {
-    color: #44B78B;
-    display: flex;
+.topic {
+    font-size: 100px;
+    text-align: center;
 }
 
-.menu li a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    color: #44B78B;
+.topic hr {
+    width: 485px;
+    float: right;
+    margin-right: 33.5%;
+    border: 2px solid red;
+    opacity: 2;
 }
 
-.menu li {
-    margin-right: 140px;
-}
-
-main {
-    background: rgb(72, 72, 72);
-    width: 100%;    
-    border: 5px solid rgb(255, 255, 255);
-    border-radius: 50px;
+.center { 
+    background-color: #919191;
     height: 500px;
-    width: 1200px;
-    margin-left: 21% ;
-    padding: 20px 50px;
-}
-
-.main-pages {
-    text-align: center;
-    color: rgb(76, 176, 223);
-    font-family: verdana;
-    font-size: 15px;
-    /* font-weight: 800; */
-    
-}
-
-.main-pages a {
-    text-align: center;
-    color: rgba(255, 203, 32, 0.959);
-    font-family: verdana;
-    font-size: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
+    width: 1200px; 
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    padding: 50px;
+    margin-right: 20%;
+    margin-top: 5.5%;
+    float: right;    
 }
 
 .center h1, h2{
     color:rgb(255, 255, 255);
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
+
+.center-pages {
+    text-align: center;
+    color: rgb(255, 217, 0);    
+    font-family: verdana;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.center a {
+    color: rgb(83, 126, 244);
+    text-decoration: none;
+}
+
+

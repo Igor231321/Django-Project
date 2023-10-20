@@ -1,3 +1,5 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Question
 from .forms import QuestionForm, ChoiceForm
@@ -13,6 +15,14 @@ class IndexView(generic.ListView):
         """Возвращает список опубликованных вопросов."""
         return Question.published.all()[:3]
 
+
+class AllQuestionsView(generic.ListView):
+    template_name = "polls/all_questions.html"
+    context_object_name = "questions_list"
+    
+    def get_queryset(self):
+        return Question.objects.all()
+        
 
 class QuestionUpdateView(generic.UpdateView):
     model = Question

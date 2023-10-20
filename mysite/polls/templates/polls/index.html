@@ -1,31 +1,21 @@
 {% extends "polls/base.html" %}
+{% load static %}
 
-{% block title %}Главная страница{% endblock %}
+{% block title %}Главная страница{% endblock title %}
 
 {% block content %}
-<header id="header" class="header">
-    <div class="menu">
-        <ul>
-            <li>
-                <a href="{% url 'polls:index' %}" title="Создать новый вопрос">Главная страница</a>
-            </li>       
-            <li>
-                <a href="{% url 'polls:new_question' %}" title="Создать новый вопрос">Новый вопрос</a>
-            </li>
-        </ul>       
+<header>
+    <div class="topic">
+        <h1>Рекомендавано</h1>
+        <hr>
     </div>
-</header>
-
-<main id="main">
     <div class="center">
-        <h1>Добро пожаловать на главную страницу сайта!</h1>
         {% for question in questions_list %}
             <h2>{{ question.question_text }}</h2>
-            <p class="main-pages">Дата публикации: {{ question.pub_date }}</p>
-            <p class="main-pages"><a href="{{ question.get_absolute_url }}">Узнать подробнее</a></p>
+            <p class="center-pages">Дата публикации: {{ question.pub_date }}</p>
+            <p class="center-pages"><a href="{{ question.get_absolute_url }}" title="Узнать подробнее">Узнать подробнее</a></p>
         {% endfor %}
     </div>
-</main>
-
-<img src="polls/images/1.jpg" alt="phohoto">
+</header>
+    
 {% endblock content %}

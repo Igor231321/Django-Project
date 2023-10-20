@@ -17,7 +17,8 @@ class Question(models.Model):
     pub_date = models.DateTimeField('Дата публикации', auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(choices=Status.choices, default=Status.PUBLISHED)
-
+    # images_file = models.ImageField('Фото') 
+    
     objects = models.Manager()
     published = PublishedManager()
 
@@ -41,3 +42,5 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+    
+

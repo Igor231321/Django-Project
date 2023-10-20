@@ -1,0 +1,10 @@
+{% extends "polls/base.html" %}
+{% load static %}
+    
+{% block title %}Все вопросы{% endblock %} 
+
+{% block content %} 
+{% for question in questions_list %}
+    <p class="main-pages">{{ question }}</p> 
+{% endfor %}
+{% endblock %}
