@@ -3,8 +3,8 @@ from django.urls import include, path
 
 
 urlpatterns = [
-    # Подключение модуля polls.urls (Первого приложения)
-    path("", include('polls.urls')),
+    # Подключени модуля product.urls (Основного приложеия)
+    path("", include('product.urls')),
     # Админка
     path("admin/", admin.site.urls),
 ]

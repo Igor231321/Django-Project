@@ -1,4 +1,4 @@
-{% extends "polls/base.html" %}
+{% extends "product/base.html" %}
 {% load static %}
 
 {% block title %}Главная страница{% endblock title %}
@@ -10,11 +10,11 @@
         <hr>
     </div>
     <div class="center">
-        {% for question in questions_list %}
+        <!-- {% for question in questions_list %}
             <h2>{{ question.question_text }}</h2>
             <p class="center-pages">Дата публикации: {{ question.pub_date }}</p>
             <p class="center-pages"><a href="{{ question.get_absolute_url }}" title="Узнать подробнее">Узнать подробнее</a></p>
-        {% endfor %}
+        {% endfor %} -->
     </div>
 </header>
     
