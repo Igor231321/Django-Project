@@ -6,16 +6,35 @@
 {% block content %}
 <header>
     <div class="topic">
-        <h1>Рекомендавано</h1>
+        <h2>Рекомендовано</h2>
         <hr>
     </div>
-    <div class="center">
-        <!-- {% for question in questions_list %}
-            <h2>{{ question.question_text }}</h2>
-            <p class="center-pages">Дата публикации: {{ question.pub_date }}</p>
-            <p class="center-pages"><a href="{{ question.get_absolute_url }}" title="Узнать подробнее">Узнать подробнее</a></p>
-        {% endfor %} -->
+    
+    <div class="main">
+        <div class="outher">
+            <!--Первая иконка-->
+            <div class="center">
+                <h5>Локшина швидкого приготування Mi Lau Thai Huong Vi Tom</h5>    
+                <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
+                <button class="btn btn-dark" type="button">
+                    <a href="https://www.youtube.com/watch?v=me2UXq1Hn1c" target="_blank">Дізнатися</a>
+                </button>
+            </div>
+            <!--Вторая иконка-->
+            <div class="center">
+                <h5>Локшина швидкого приготування CUNG DINH</h5>    
+                <img src="{% static 'product/images/Cung Dihn.svg' %}" alt="Сung Dihn">
+                <button class="btn btn-dark" type="button">
+                    <a href="https://www.youtube.com/watch?v=me2UXq1Hn1c" target="_blank">Дізнатися</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
+        <img src="{% static 'product/images/Cung Dihn.svg' %}" alt="Сung Dihn">
+        <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
     </div>
 </header>
-    
 {% endblock content %}
