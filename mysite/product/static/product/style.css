@@ -18,7 +18,7 @@ aside {
 
 .topic {
     text-align: center;
-    color: rgb(239, 21, 21)
+    color: rgb(255, 0, 0)
 }
 
 hr {
@@ -65,8 +65,9 @@ img {
 }
 
 .container {
-    display: flex;
+    /* display: flex; */
     background-color: rgb(255, 255, 255);
-    flex-direction: row;  
-    justify-content: space-between; 
+    /* flex-direction: row;   */
+    /* justify-content: space-between;  */
+    text-align: center;
 }   
