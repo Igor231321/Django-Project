@@ -3,47 +3,57 @@
 body {
     background: rgb(95, 95, 95); 
 }
+
+img {
+    max-width: 300px;   
+    padding: 20px; 
+}
+
 aside {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
     background-color: #0000007b;
     float: left;
     height: 963px;
-    width: 300px;
+    /* height: 99%; */
+    /* width: 310px; */
+    width: 15%;
 }
 
 .menu a {
+    max-width: 15%;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 25px;
 }   
 
 .topic {
-    text-align: center;
-    color: rgb(255, 0, 0)
+    display: inline-block;
+    width: 400px;
+    /* text-align: center; */
+    color: rgb(255, 255, 255);
+    border-bottom: 3px solid red;
+    padding-bottom: 0px;
 }
 
-hr {
-    width: 485px;
-    margin-right: 29.3%;
-    border: 2px solid red;
-    opacity: 2;
-} 
-
+.outher {
+    margin: 30px;
+}
 
 .center { 
     display: inline-block;
-    text-align: center;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* text-align: center;  */
     background-color: #ffffff;
-    /* height: 500px;
-    width: 500px;  */
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 50px;
+    /* height: 400px; */
+    /* width: 500px;   */
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    /* margin-top: 10px;    */
     padding: 15px;
-    margin: 15px;
-}
-
-img {
-    max-width: 300px;   
-    padding: 20px; 
 }
 
 .center h6 {
@@ -53,21 +63,15 @@ img {
 
 .center-pages {
     text-align: center;
-    color: rgb(255, 217, 0);    
     font-family: verdana;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 15px;
 }
 
 .center a {
-    color: rgb(83, 126, 244);
+    color: rgba(255, 255, 255, 0.815);
     text-decoration: none;
 }
 
-.container {
-    /* display: flex; */
-    background-color: rgb(255, 255, 255);
-    /* flex-direction: row;   */
-    /* justify-content: space-between;  */
+.main {
     text-align: center;
-}   
+}

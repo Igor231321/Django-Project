@@ -4,37 +4,36 @@
 {% block title %}Главная страница{% endblock title %}
 
 {% block content %}
-<header>
+<header class="main">
     <div class="topic">
-        <h2>Рекомендовано</h2>
-        <hr>
+        <h4>Рекомендовано</h4>
     </div>
-    
-    <div class="main">
-        <div class="outher">
-            <!--Первая иконка-->
-            <div class="center">
-                <h5>Локшина швидкого приготування Mi Lau Thai Huong Vi Tom</h5>    
+    <div class="outher">
+        {% for product in product_list %}
+        <div class="center">
+            {% if product.product_title == "Mi Lau Thai Huong Vi Tom" %}
                 <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
-                <button class="btn btn-dark" type="button">
-                    <a href="#" target="_blank">Дізнатися</a>
+                <h5>{{ product.product_title }}</h5>
+                <p class="center-pages">Локшина швидкого приготування зі смаком креветки</p>
+                <button class="btn btn-primary" type="button">
+                    <a href="{% url 'product:detail' product_id }">Дізнатися</a>
                 </button>
-            </div>
-            <!--Вторая иконка-->
-            <div class="center">
-                <h5>Локшина швидкого приготування CUNG DINH</h5>    
+            {% else %}
                 <img src="{% static 'product/images/Cung Dihn.svg' %}" alt="Сung Dihn">
-                <button class="btn btn-dark" type="button">
-                    <a href="#" target="_blank">Дізнатися</a>
-                </button>
-            </div>
+                <h5>{{ product.product_title }}</h5>
+                <p class="center-pages">Локшина швидкого приготування зі смаком Яловичини</p>
+                <button class="btn btn-primary" type="button">
+                    <a href="#">Дізнатися</a>
+                </button> 
+            {% endif %}
         </div>
+        {% endfor %}
     </div>
+</header>
 
-    <div class="container">
+<!-- <div class="container">
         <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
         <img src="{% static 'product/images/Cung Dihn.svg' %}" alt="Сung Dihn">
         <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
-    </div>
-</header>
+    </div> -->
 {% endblock content %}

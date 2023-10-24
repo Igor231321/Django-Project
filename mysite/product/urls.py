@@ -5,5 +5,6 @@ app_name = "product"
 
 urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),
-    # path("detail/", v)
+    # detail/pk_product
+    path("detail/<int:pk>/", views.DetailView.as_view(), name="detail"),
 ]
