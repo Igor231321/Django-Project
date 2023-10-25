@@ -10,7 +10,6 @@ img {
 }
 
 aside {
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     background-color: #0000007b;
