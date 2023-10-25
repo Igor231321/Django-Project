@@ -1,4 +1,8 @@
 {
     "editor.matchBrackets": "never",
     "editor.bracketPairColorization.enabled": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none",
 }
