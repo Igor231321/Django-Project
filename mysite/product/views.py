@@ -11,6 +11,7 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Product.objects.all()[:3]
     
+
 class DetailView(generic.DetailView):
     model = Product
     template_name = "product/detail.html"
