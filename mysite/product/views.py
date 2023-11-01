@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from typing import Any
+from django.db.models.query import QuerySet
+from django.shortcuts import render
 from django.views import generic 
 
 from .models import Product
@@ -16,3 +18,11 @@ class DetailView(generic.DetailView):
     model = Product
     template_name = "product/detail.html"
     context_object_name = "product"
+
+class AllProductView(generic.ListView):
+    model = Product
+    template_name = "product/all_product.html"
+    context_object_name = "product_list"
+    
+    def get_queryset(self):
+        return Product.objects.all()

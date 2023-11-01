@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap'); */
 
 body {
-    background: rgb(95, 95, 95); 
+    /* background: rgb(95, 95, 95);  */
+    background-color: aliceblue;
 }
 
 img {
@@ -9,15 +10,16 @@ img {
     padding: 20px; 
 }
 
-aside {
+header {
     display: flex;
-    justify-content: center;
-    background-color: #0000007b;
-    float: left;
-    height: 963px;
-    /* height: 99%; */
-    /* width: 310px; */
-    width: 15%;
+    justify-content: end;
+    background-color: #3c4a58;
+    height: 90px;
+    width: 100%;
+}
+
+.menu {
+    margin: 0px;
 }
 
 .menu a {
@@ -29,11 +31,11 @@ aside {
 
 .topic {
     display: inline-block;
-    width: 400px;
-    /* text-align: center; */
-    color: rgb(255, 255, 255);
+    width: 300px;
+    color: black;
     border-bottom: 3px solid red;
-    padding-bottom: 0px;
+    margin-top: 50px;
+    padding-bottom: 5px;
 }
 
 .outher {
@@ -42,6 +44,8 @@ aside {
 
 .center { 
     display: inline-block;
+    max-width: 350px;
+    max-height: 450px;
     /* flex-direction: column; */
     /* justify-content: space-around; */
     /* text-align: center;  */
@@ -49,28 +53,39 @@ aside {
     /* height: 400px; */
     /* width: 500px;   */
     border-style: solid;
-    border-width: 3px;
+    border-color: rgb(60, 60, 60);
+    border-width: 1px;
     border-radius: 10px;
-    /* margin-top: 10px;    */
+    margin-left: 3px;
+    margin-right: 3px;   
+    margin-bottom: 5px;
     padding: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
-.center h6 {
-    color:rgb(0, 0, 0);
-    font-family: 'Oswald', sans-serif;
+.center h5 {
+    color:#2f322c;
+    font-weight: bold;
 }
 
 .center-pages {
     text-align: center;
     font-family: verdana;
     font-size: 15px;
+    color: black;
 }
 
-.center a {
+.center-link {
     color: rgba(255, 255, 255, 0.815);
     text-decoration: none;
 }
 
 .main {
     text-align: center;
+    color: white;
+}
+
+.button-box {
+    width: 300px;
+    height: 300px;
 }

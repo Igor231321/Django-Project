@@ -8,4 +8,6 @@ urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),
     # detail/pk_product
     path("detail/<int:pk>/", views.DetailView.as_view(), name="detail"),
+    # Все продукты
+    path("all_product/", views.AllProductView.as_view(), name="all_product" )
 ]

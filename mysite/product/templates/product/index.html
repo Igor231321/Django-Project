@@ -4,32 +4,46 @@
 {% block title %}Главная страница{% endblock title %}
 
 {% block content %}
-<header class="main">
+<main class="main">
     <div class="topic">
-        <h4>Рекомендовано</h4>
+        <h5>Рекомендовано</h5>
     </div>
+    
     <div class="outher">
         {% for product in product_list %}
         <div class="center">
-            {% if product.product_title == "Mi Lau Thai Huong Vi Tom" %}
+            {% if product.slug == "mi-lau-thai-vuong-vi-tom-red" %}
                 <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
-                <h5>{{ product.product_title }}</h5>
+                <h5 >{{ product.product_title }}</h5>
                 <p class="center-pages">Локшина швидкого приготування зі смаком креветки</p>
                 <button class="btn btn-primary" type="button">
-                    <a href="{% url 'product:detail' product_id }">Дізнатися</a>
+                    <a href="{% url 'product:detail' product.pk %}" class="center-link">{{ product.price}} ₴</a>
+                </button>
+            {% elif product.slug == "cung-dihn-green" %}
+                <img src="{% static 'product/images/images (6)' %}" alt="Cung-dihn-green">
+                <h5 >{{ product.product_title }}</h5>
+                <p class="center-pages">Локшина швидкого приготування зі смаком Свинини</p>
+                <button class="btn btn-primary" type="button">
+                    <a href="{% url 'product:detail' product.pk %}" class="center-link">{{ product.price}} ₴</a>
                 </button>
             {% else %}
                 <img src="{% static 'product/images/Cung Dihn.svg' %}" alt="Сung Dihn">
                 <h5>{{ product.product_title }}</h5>
                 <p class="center-pages">Локшина швидкого приготування зі смаком Яловичини</p>
                 <button class="btn btn-primary" type="button">
-                    <a href="#">Дізнатися</a>
-                </button> 
+                    <a href="{% url 'product:detail' product.pk %}" class="center-link">{{ product.price }} ₴</a>
+                </button>
             {% endif %}
         </div>
         {% endfor %}
+        
+        <br>
+
+        <button class="btn btn-outline-danger">
+            <a href="#">Переглянути усі пропозиції</a>
+        </button>
     </div>
-</header>
+</main>
 
 <!-- <div class="container">
         <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
