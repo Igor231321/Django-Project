@@ -1,7 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap');
 
 body {
-    /* background: rgb(95, 95, 95);  */
     background-color: aliceblue;
 }
 
@@ -11,23 +10,42 @@ img {
 }
 
 header {
-    display: flex;
-    justify-content: end;
     background-color: #3c4a58;
     height: 90px;
     width: 100%;
 }
 
-.menu {
-    margin: 0px;
+.menu-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-.menu a {
-    max-width: 15%;
+.menu-list li {
+    margin-top: 25px;
+}
+
+.menu-list li a {
+    list-style: none;
+    margin-right: 40px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 25px;
-}   
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button-link {
+    width: 220px;
+}
+
+.button-link a {
+    display: inline-block;
+    color: inherit;
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+}
 
 .topic {
     display: inline-block;
@@ -45,13 +63,9 @@ header {
 .center { 
     display: inline-block;
     max-width: 350px;
+    height: 450px;
     max-height: 450px;
-    /* flex-direction: column; */
-    /* justify-content: space-around; */
-    /* text-align: center;  */
     background-color: #ffffff;
-    /* height: 400px; */
-    /* width: 500px;   */
     border-style: solid;
     border-color: rgb(60, 60, 60);
     border-width: 1px;
@@ -73,6 +87,7 @@ header {
     font-family: verdana;
     font-size: 15px;
     color: black;
+    margin-bottom: 35px;
 }
 
 .center-link {
@@ -82,10 +97,10 @@ header {
 
 .main {
     text-align: center;
-    color: white;
 }
 
-.button-box {
-    width: 300px;
-    height: 300px;
+.box {
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 15%;
 }

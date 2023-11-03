@@ -12,17 +12,17 @@
 </head>
 
 <body>
-    <header id="aside" class="aside">
-        <div class="menu">
-            <button class="btn btn-danger menu-button">
-                <a href="{% url 'product:index' %}" class="center-link">Головная сторінка</a>
-            </button>
-            <div class="button-box">
-                <a href="#">Усі пропозиції</a>
-            </div>
-        </div>
+    <header id="header" class="header">
+        <ul class="menu-list">
+            <li>
+                <a href="{% url 'product:index' %}">Головная сторінка</a>
+            </li>
+            <li>
+                <a href="{% url 'product:all_product' %}">Усі пропозиції</a>
+            </li>
+        </ul>
     </header>
-
+    
     {% block content %}
     {% endblock %}
 </body>

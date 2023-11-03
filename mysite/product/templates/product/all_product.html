@@ -1,9 +1,14 @@
 {% extends "product/base.html" %}
+{% load static %} 
 
 {% block content %}
-
 {% for product in product_list %}
-    {{ product.t }}
+    <div class="box">
+        <h1>{{ product.product_title }}</h1>
+        <p>{{ product.description }}</p>
+        <p>Цена за шт: {{ product.price }}₴</p>
+        <hr>
+    </div>
 {% endfor %}
 
-{% endblock content %}
+{% endblock %}
