@@ -10,7 +10,7 @@ class IndexView(generic.ListView):
     context_object_name = "product_list"
     
     def get_queryset(self):
-        return Product.objects.all()[:3]
+        return Product.published.all()[:3]
     
 
 # class DetailView(generic.DetailView):

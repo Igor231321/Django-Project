@@ -15,23 +15,23 @@
             {% if product.slug == "mi-lau-thai-vuong-vi-tom-red" %}
             <img src="{% static 'product/images/Mi Lau Thai.svg' %}" alt="Mi Lau Thai">
             <h5>{{ product.product_title }}</h5>
-            <p class="center-pages">Локшина швидкого приготування зі смаком креветки</p>
+            <p class="center-pages">Локшина швидкого приготування <br>зі смаком креветки</p>
             <button class="btn btn-primary button-link" type="button">
-                <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price}} ₴</a>
+                <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price }} ₴</a>
             </button>
 
             {% elif product.slug == "cung-dihn-green" %}
             <img src="{% static 'product/images/cung-dihn-green.png' %}" alt="Cung-dihn-green">
             <h5>{{ product.product_title }}</h5>
-            <p class="center-pages">Локшина швидкого приготування зі смаком Свинини</p>
+            <p class="center-pages">Локшина швидкого приготування <br>зі смаком Свинини</p>
             <button class="btn btn-primary button-link" type="button">
-                <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price}} ₴</a>
+                <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price }} ₴</a>
             </button>
 
             {% else %}
             <img src="{% static 'product/images/Cung Dihn.svg' %}" alt="Сung Dihn">
             <h5>{{ product.product_title }}</h5>
-            <p class="center-pages">Локшина швидкого приготування зі смаком Яловичини</p>
+            <p class="center-pages">Локшина швидкого приготування <br>зі смаком Яловичини</p>
             <button class="btn btn-primary button-link" type="button">
                 <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price }} ₴</a>
             </button>
