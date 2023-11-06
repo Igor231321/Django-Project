@@ -16,7 +16,8 @@ class Product(models.Model):
     slug = models.SlugField("Короткая метка", max_length=255, blank=True, unique=True, db_index=True)
     description = models.TextField('Описание товара')
     price = models.IntegerField('Цена товара', default=0)
-    is_published = models.BooleanField("Текущее состояние",choices=Status.choices, default=Status.DRAFT)
+    is_published = models.BooleanField("Текущее состояние", choices=Status.choices, default=Status.DRAFT)
+    category = models.ForeignKey('Category', on_delete=models.PROTECT)
     
     objects = models.Manager() # Определяем старый менеджер, чтобы не пропал после определения нового
     published = PublishedManager() # Новый менеджер
@@ -26,4 +27,11 @@ class Product(models.Model):
     
     def __str__(self):
         return self.product_title
+    
+    
+class Category(models.Model):
+    name = models.CharField('Название категории', max_length=100)
+    
+    def __str__(self):
+        return self.name
     
