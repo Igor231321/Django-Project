@@ -6,8 +6,30 @@
 {% block content %}
 <div class="main">
     <h1>{{ product.product_title }}</h1>
-    <p>{{ product.description|linebreaks }}</p>
+    <!-- <p>{{ product.description|linebreaks }}</p> -->
 </div>
-    
-    
+
+<div class="box-parent">
+    {% if product.slug == "mi-lau-thai" %}
+        <div>
+            <img src="{% static 'product/images/Mi Lau Thai2.png' %}" alt="Mi Lau Thai" class="detail-img">
+        </div>
+    {% endif %}
+    <div class="box-text">
+        {{ product.description }}
+        <br>
+        <button class="btn btn-danger">
+            <a href="">Купить</a>
+        </button>
+    </div>
+    <!-- <div class="box-test">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Cum magnam incidunt, quos consequatur ea
+        molestiae ab sit laudantium quibusdam eos obcaecati fuga minus quaerat et molestias voluptate soluta dicta
+        ipsum.</div>
+    <div class="box-test">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Cum magnam incidunt, quos consequatur eamolestiae ab sit laudantium quibusdam
+        eos obcaecati fuga minus quaerat et molestias voluptate soluta dictaipsum.</div> -->
+</div>
 {% endblock content %}

@@ -4,11 +4,16 @@ from . import views
 app_name = "product"
 
 urlpatterns = [
-    # Главная страница
-    path("", views.IndexView.as_view(), name="index"),
-    # detail/pk_product
+    # home page
+    # path("", views.IndexView.as_view(), name="index"),
+    path("", views.index_page, name="index"),
+    # product_detail
     # path("detail/<int:pk>/", views.DetailView.as_view(), name="detail"),
     path("detail/<slug:product_slug>/", views.show_product, name="detail"),
-    # all_product
-    path("all_product/", views.AllProductView.as_view(), name="all_product" )
+    # show_all_product
+    path("all_product/", views.AllProductView.as_view(), name="all_product" ),
+    # show_category
+    path("category/<slug:category_slug>/", views.show_category, name="category"),
+    # buy form
+    path("detail/<slug:product_slug>/buy", views.buy_page, name="buy_menu"),
 ]

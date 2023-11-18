@@ -1,15 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap');
 
-body {
+html, body {
+    margin: 0;
+    padding: 0;
     background-color: aliceblue;
 }
-
-img {
-    max-width: 300px;   
-    padding: 20px; 
+* {
+    box-sizing: border-box;
 }
 
+/* Фото на сайте */
+.home-img {
+    max-width: 300px;
+    height: 300px;
+}
+
+.detail-img {
+    width: 600px;
+    margin: 10%;
+}
+
+.first-img {
+    padding-right: 33px;
+    padding-top: 10px; 
+    width: 354px;
+    height: 300px;
+}
+
+.small-img {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 200px;
+    height: 300px;
+    min-width: 200px;
+}
+
+/* Текст на сайте */
 header {
+    display: flex;
+    justify-content: end;
     background-color: #3c4a58;
     height: 90px;
     width: 100%;
@@ -62,9 +91,8 @@ header {
 
 .center { 
     display: inline-block;
-    max-width: 350px;
-    height: 450px;
-    max-height: 450px;
+    width: 350px;
+    height: 475px;
     background-color: #ffffff;
     border-style: solid;
     border-color: rgb(60, 60, 60);
@@ -72,8 +100,10 @@ header {
     border-radius: 10px;
     margin-left: 3px;
     margin-right: 3px;   
-    margin-bottom: 5px;
-    padding: 15px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -96,11 +126,36 @@ header {
 }
 
 .main {
+    margin-top: 25px;
     text-align: center;
 }
 
 .box {
     display: inline-block;
-    margin-left: 20%;
-    margin-right: 20%;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+}
+
+.box-text {
+    display: inline-block;
+    font-size: 20px;
+    color:#000000;
+    width: 400px;
+    /* background-color: #3c4a58; */
+    margin: 20px;
+    padding: 30px;
+}
+
+.box-parent {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+footer {
+    background-color: #3c4a58;
+    width: 100%;
+    min-height: 60px;
+    color:antiquewhite;
+    text-align: center;
 }
