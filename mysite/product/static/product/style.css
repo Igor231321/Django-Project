@@ -132,8 +132,15 @@ header {
 
 .box {
     display: inline-block;
-    /* margin-left: 20%;
-    margin-right: 20%; */
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+.box-button {
+    height: 150px;
+    width: 100px;
+    color: black;
+    text-decoration: none;
 }
 
 .box-text {

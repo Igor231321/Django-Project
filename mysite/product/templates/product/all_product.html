@@ -2,14 +2,20 @@
 {% load static %}
 
 {% block title %}Усі пропозиції{% endblock title %}
+
 {% block content %}
-<br>
-<div class="box">
-    {% for product in product_list %}
-        <h1>{{ product.product_title }}</h1>
-        <p>{{ product.description|linebreaks }}</p>
-        <p><b>Цена за шт: {{ product.price }}₴</b></p>
-        <hr>
-    {% endfor %}
-</div>
+    <br>
+    <div class="box ">
+        {% for product in products %}
+            <h1>{{ product.product_title }}</h1>
+            <p>{{ product.description|linebreaks }}</p>
+            <button class="btn btn-primary">
+                <a href="{{ product.get_absolute_url }}" class="box-button">
+                    Цена за шт: {{ product.price }}₴</p>
+                </a>
+            </button>
+            <hr>
+        {% endfor %}
+    </div>
+    {% include "product/pagination.html" with page=products %}
 {% endblock %}
