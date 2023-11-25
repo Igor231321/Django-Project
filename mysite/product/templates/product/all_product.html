@@ -5,17 +5,19 @@
 
 {% block content %}
     <br>
-    <div class="box ">
+    <div class="box">
         {% for product in products %}
             <h1>{{ product.product_title }}</h1>
-            <p>{{ product.description|linebreaks }}</p>
-            <button class="btn btn-primary">
-                <a href="{{ product.get_absolute_url }}" class="box-button">
+            <img src="{% static 'product/images/Mi Lau Thai2.png' %}" alt="Mi Lau Thai" class="menu-image">
+            <div class="menu-content">
+                <p>{{ product.description|linebreaks }}</p>
+                <a href="{{ product.get_absolute_url }}" class="button-link">
                     Цена за шт: {{ product.price }}₴</p>
                 </a>
-            </button>
             <hr>
+            </div>
         {% endfor %}
     </div>
     {% include "product/pagination.html" with page=products %}
+
 {% endblock %}

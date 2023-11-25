@@ -22,30 +22,25 @@
             <img src="{% static 'product/images/Mi Lau Thai2.png' %}" alt="Mi Lau Thai" class="first-img">
             <h5>{{ product.product_title }}</h5>
             <p class="center-pages">Локшина швидкого приготування <br>зі смаком креветки</p>
-            <button class="btn btn-primary button-link" type="button">
-                <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price }} ₴</a>
-            </button>
+            <a href="{{ product.get_absolute_url }}" class="button-link">{{ product.price }} ₴</a>
 
             {% elif product.slug == "cung-dihn-green" %}
             <img src="{% static 'product/images/3D-bag-Shrimp.png' %}" alt="Cung-dihn-green" class="small-img">
             <h5>{{ product.product_title }}</h5>
             <p class="center-pages">Локшина швидкого приготування <br>зі смаком Свинини</p>
-            <button class="btn btn-primary button-link" type="button">
-                <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price }} ₴</a>
-            </button>
+            <a href="{{ product.get_absolute_url }}" class="button-link">{{ product.price }} ₴</a>
 
             {% else %}
-            <!-- <img src="{% static 'product/images/cung-dinh-red.png' %}" alt="Сung Dihn" class="product-images"> -->
             <img src="https://k-ramen.eu/cdn/shop/products/bdMmuXI0W6dzLF5Z_5d226ded-8a3a-4b32-b6fa-0d194b30bd11.jpg?v=1658909594&width=713" alt="" class="home-img">
             <h5>{{ product.product_title }}</h5>
             <p class="center-pages">Локшина швидкого приготування <br>зі смаком Яловичини</p>
-            <button class="btn btn-primary button-link" type="button">
-                <a href="{{ product.get_absolute_url }}" class="center-link">{{ product.price }} ₴</a>
-            </button>
+            <a href="{{ product.get_absolute_url }}" class="button-link">{{ product.price }} ₴</a>
             {% endif %}
+
         </div>
         {% endfor %}
     </div>
+    <a href="{% url 'product:all_product' %}" class="button-link">ПЕРЕГЛЯНУТИ УСІ ПРОПОЗИЦІЇ</a>
 </main>
 
 {% endblock content %}

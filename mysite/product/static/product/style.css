@@ -3,8 +3,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
+    background-color: #E3E6E6;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -35,53 +36,65 @@ html, body {
     min-width: 200px;
 }
 
-/* Текст на сайте */
+/* Верхняя навигационная панель */
 header {
     display: flex;
-    justify-content: end;
-    background-color: #3c4a58;
+    justify-content: space-between;
+    background-color: #54181f;
     height: 90px;
-    width: 100%;
 }
 
-.menu-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+.nav-menu {
+    padding: 25px;
 }
 
-.menu-list li {
-    margin-top: 25px;
-}
-
-.menu-list li a {
-    list-style: none;
-    margin-right: 40px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.button-link {
-    width: 220px;
-}
-
-.button-link a {
+.nav-link {
     display: inline-block;
-    color: inherit;
-    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: all 0.5s;
+    /* margin-right: 50px; */
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.378);
+}
+
+.nav-button {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
     width: 200px;
     text-align: center;
+    padding: 10px 10px;
+    font-weight: bolder;
+    border: 2px solid #ffffff;
+    transition: all 0.5s;
+    /* margin-right: 30px; */
+}
+
+.nav-button:hover {
+    color: #54181f;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    font-weight: bold;
+}
+
+@media (max-width: 1500px) {
+    header {
+        flex-direction: column;
+    }
 }
 
 .topic {
     display: inline-block;
     width: 300px;
     color: black;
-    border-bottom: 3px solid red;
-    margin-top: 50px;
+    border-bottom: 2px solid rgba(73, 73, 73, 0.603);
+    margin-top: 10px;
     padding-bottom: 5px;
 }
 
@@ -94,16 +107,8 @@ header {
     width: 350px;
     height: 475px;
     background-color: #ffffff;
-    border-style: solid;
-    border-color: rgb(60, 60, 60);
-    border-width: 1px;
-    border-radius: 10px;
-    margin-left: 3px;
-    margin-right: 3px;   
-    margin-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    margin: 0px 3px 3px 10px;   /*Верх, право, низ, лево - отступы для каждой стороны */ 
+    padding: 0px 15px 15px 15px;     /*Верх, право, низ, лево - отступы для каждой стороны */
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -120,33 +125,44 @@ header {
     margin-bottom: 35px;
 }
 
-.center-link {
-    color: rgba(255, 255, 255, 0.815);
-    text-decoration: none;
-}
-
 .main {
     margin-top: 25px;
     text-align: center;
 }
 
 .box {
-    display: inline-block;
-    margin-left: 20%;
-    margin-right: 20%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d1216;
+    color: #fff;
 }
-.box-button {
-    height: 150px;
-    width: 100px;
-    color: black;
+
+.button-link {
+    display: inline-block;
+    background-color: rgb(193, 50, 50);
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    width: 300px;
+    /* height: 30px; */
+    text-align: center;
+    padding: 5px 5px;
+    font-weight: 550;
+    /* border: 2px solid #000000; */
+    transition: all 0.5s;
+}
+
+.button-link:hover {
+    color:rgb(255, 255, 255);
+    background-color: #000000;
+    /* border: 2px solid #000000; */
+    font-weight: 550;
 }
 
 .box-text {
     display: inline-block;
     font-size: 20px;
-    color:#000000;
+    color:#ffffff;
     width: 400px;
     /* background-color: #3c4a58; */
     margin: 20px;
@@ -165,4 +181,19 @@ footer {
     min-height: 60px;
     color:antiquewhite;
     text-align: center;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.menu-image {
+    max-width: 400px; /* Укажите желаемую максимальную ширину для изображения */
+    height: auto;
+    margin-right: 20px;
 }
