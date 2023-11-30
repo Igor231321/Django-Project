@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: #E3E6E6;
@@ -10,42 +13,17 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Фото на сайте */
-.home-img {
-    max-width: 300px;
-    height: 300px;
-}
-
-.detail-img {
-    width: 600px;
-    margin: 10%;
-}
-
-.first-img {
-    padding-right: 33px;
-    padding-top: 10px; 
-    width: 354px;
-    height: 300px;
-}
-
-.small-img {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    width: 200px;
-    height: 300px;
-    min-width: 200px;
-}
-
-/* Верхняя навигационная панель */
-header {
+/* Верхняя нав. панель */
+.nav-container {
     display: flex;
     justify-content: space-between;
     background-color: #54181f;
-    height: 90px;
+    /* height: 80px; */
 }
 
 .nav-menu {
     padding: 25px;
+    margin: 0 0 0 450px;
 }
 
 .nav-link {
@@ -53,80 +31,140 @@ header {
     color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
-    font-weight: bold;
-    margin-right: 20px;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    margin: 0 80px 0 0;
     transition: all 0.5s;
-    /* margin-right: 50px; */
 }
 
 .nav-link:hover {
-    color: rgba(255, 255, 255, 0.378);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-button {
     display: inline-block;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
     width: 200px;
-    text-align: center;
-    padding: 10px 10px;
-    font-weight: bolder;
-    border: 2px solid #ffffff;
+    text-decoration: none;
     transition: all 0.5s;
-    /* margin-right: 30px; */
+    border: 2px solid #ffffff;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+    margin: 15px 200px 0 0;
 }
 
 .nav-button:hover {
     color: #54181f;
     background-color: #ffffff;
     border: 2px solid #000000;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
-@media (max-width: 1500px) {
-    header {
+@media (max-width: 400px) {
+    .nav-container {
         flex-direction: column;
     }
 }
 
+/*Заголовок сайта*/
+
+.topic-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    background-color: #2f322c;
+    background: linear-gradient(90deg, rgba(130,130,130,1) 0%, rgba(189,189,189,1) 45%, rgba(255,255,255,1) 100%);
+}
+
+.topic-text {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 50px 0 50px;
+    height: 300px;
+    width: 50%;
+}
+
+.topic-img {
+    margin: 0 50px 0 50px;
+}
+
 .topic {
     display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000 !important;
     width: 300px;
-    color: black;
-    border-bottom: 2px solid rgba(73, 73, 73, 0.603);
-    margin-top: 10px;
-    padding-bottom: 5px;
+    margin: 50px 0 20px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid #54181f;
+    font-size: 23px;
 }
 
+/* Основа сайта */
 .outher {
-    margin: 30px;
+    margin: 50px;
 }
 
-.center { 
+/* Photo on site */
+.mi-lau-photo {
+    width: 100%;
+    height: 100%;
+}
+
+.cung-photo {
+    width: 75%;
+    height: 100%;
+    padding: 20px 15px 10px 15px;
+}
+
+.card-photo {
+    width:100%;
+    height: 60%;
+}
+
+/* Text on card */
+.product-card {
     display: inline-block;
-    width: 350px;
-    height: 475px;
+    width: 400px;
+    height: 600px;
     background-color: #ffffff;
-    margin: 0px 3px 3px 10px;   /*Верх, право, низ, лево - отступы для каждой стороны */ 
-    padding: 0px 15px 15px 15px;     /*Верх, право, низ, лево - отступы для каждой стороны */
+    margin: 0px 10px 15px 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
 }
 
-.center h5 {
-    color:#2f322c;
-    font-weight: bold;
+.card-body{
+    display: inline-block;
+    height: 40%;
 }
 
-.center-pages {
+.card-body h4 {
+    padding: 5px 0 0 0;
+    color: #000000;
+    /* font-family: 'Oswald', sans-serif; */
+    /* font-weight: 900; */
+}
+
+.card-body p {
     text-align: center;
     font-family: verdana;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
     color: black;
-    margin-bottom: 35px;
+    margin: 40px 0 35px 0;
+}
+
+#all_product {
+    height: 50px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
 }
 
 .main {
-    margin-top: 25px;
     text-align: center;
 }
 
@@ -138,31 +176,33 @@ header {
     color: #fff;
 }
 
-.button-link {
+.card-link {
     display: inline-block;
-    background-color: rgb(193, 50, 50);
+    background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-decoration: none;
     width: 300px;
-    /* height: 30px; */
+    height: 40px;
     text-align: center;
-    padding: 5px 5px;
+    margin: 15px;
+    padding: 5px 0 5px 0;
     font-weight: 550;
-    /* border: 2px solid #000000; */
+    border: 1px solid #000000;
     transition: all 0.5s;
+    border-radius: 5px;
 }
 
-.button-link:hover {
-    color:rgb(255, 255, 255);
-    background-color: #000000;
-    /* border: 2px solid #000000; */
+.card-link:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: 1px solid #000000;
     font-weight: 550;
 }
 
 .box-text {
     display: inline-block;
     font-size: 20px;
-    color:#ffffff;
+    color: #ffffff;
     width: 400px;
     /* background-color: #3c4a58; */
     margin: 20px;
@@ -175,25 +215,21 @@ header {
     align-items: start;
 }
 
+/*  */
 footer {
-    background-color: #3c4a58;
+    /* background-color: #0d1216; */
     width: 100%;
     min-height: 60px;
-    color:antiquewhite;
+    color: antiquewhite;
     text-align: center;
 }
 
-.main-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #000000;
-    color: #fff;
-}
-
-.menu-image {
-    max-width: 400px; /* Укажите желаемую максимальную ширину для изображения */
-    height: auto;
-    margin-right: 20px;
+.block {
+    /* background-color: rgb(223, 255, 127); */
+    background: url("https://www.kfc-ukraine.com/admin/files/medium/medium_4296.jpg") fixed;
+    /* background: linear-gradient(to right, #f79431 0%,#ffd930 0%,#ed7600c4 100%); */
+    border-radius: 15px;
+    height: 1000px;
+    margin: 30px;
+    box-shadow: 0 0 10px rgb(58, 58, 58);
 }
