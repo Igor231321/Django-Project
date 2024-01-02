@@ -215,6 +215,11 @@ body {
     align-items: start;
 }
 
+.detail-img {
+    width: 50%;
+    height: 50%;
+}
+
 /*  */
 footer {
     /* background-color: #0d1216; */

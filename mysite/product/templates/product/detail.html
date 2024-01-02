@@ -4,21 +4,37 @@
 {% block title %}{{ product.product_title }}{% endblock title %}
 
 {% block content %}
-<div class="main">
-    <h1>{{ product.product_title }}</h1>
-    <!-- <p>{{ product.description|linebreaks }}</p> -->
-</div>
-
-<div class="box-parent">
+<div class="box-detail">
     {% if product.slug == "mi-lau-thai" %}
-        <div>
-            <img src="{% static 'product/images/Mi Lau Thai2.png' %}" alt="Mi Lau Thai" class="detail-img">
-        </div>
-    {% endif %}
-    
-    <div class="box-text">
-        {{ product.description }}
-        <a href="#" class="button-link">Купить</a>
+    <div class="detail-img">
+        <img src="{% static 'product/images/Mi Lau Thai.png' %}" alt="Mi Lau Thai" class="mi-lau-thai">
     </div>
+    <div class="card-body">
+        <h4>{{ product.product_title }}</h4>
+        <p>Локшина швидкого приготування <br>зі смаком Свинини</p>
+        <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+    </div>
+
+    <!-- {% elif product.slug == "cung-dihn-green" %}
+        <div class="card-photo">
+            <img src="{% static 'product/images/cung-dihn-green.png' %}" alt="Cung-dihn-green" class="cung-photo">
+        </div>
+        <div class="card-body">
+            <h4>{{ product.product_title }}</h4>
+            <p>Локшина швидкого приготування <br>зі смаком Свинини</p>
+            <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+        </div> -->
+
+    {% else %}
+    <div class="card-photo">
+        <img src="{% static 'product/images/cung-dihn-purple.png'%}" alt="Cung-dihn-purple" class="cung-photo">
+    </div>
+    <div class="card-body">
+        <h4>{{ product.product_title }}</h4>
+        <p>Локшина швидкого приготування <br>зі смаком Яловичини</p>
+        <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+    </div>
+
+    {% endif %}
 </div>
 {% endblock content %}
