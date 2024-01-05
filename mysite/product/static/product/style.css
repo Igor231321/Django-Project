@@ -15,27 +15,44 @@ body {
 
 /* Верхняя нав. панель */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
+    height: 80px;
     background-color: #54181f;
-    /* height: 80px; */
+    justify-content: space-between;
+    display: flex;
 }
 
 .nav-menu {
-    padding: 25px;
     margin: 0 0 0 450px;
+    padding: 15px 0 0 0;
+    align-items: center;
+    display: flex;
 }
 
-.nav-link {
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+.nav-menu ul li a {
+    margin: 0 50px 0 0;
+    transition: all 0.5s;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    align-items: center;
+    /* display: flex; */
+
+}
+/* .nav-link {
     display: inline-block;
     color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
     font-size: 18px;
     font-family: 'Playfair Display', serif;
-    margin: 0 80px 0 0;
+    margin: 0 100px 0 0;
     transition: all 0.5s;
-}
+} */
 
 .nav-link:hover {
     color: rgba(255, 255, 255, 0.7);
@@ -52,7 +69,7 @@ body {
     font-weight: bolder;
     font-size: 20px;
     padding: 5px 0 5px 0;
-    margin: 15px 200px 0 0;
+    margin: 18px 200px 0 0;
 }
 
 .nav-button:hover {
@@ -62,11 +79,6 @@ body {
     /* font-weight: bold; */
 }
 
-@media (max-width: 400px) {
-    .nav-container {
-        flex-direction: column;
-    }
-}
 
 /*Заголовок сайта*/
 
@@ -209,15 +221,39 @@ body {
     padding: 30px;
 }
 
-.box-parent {
+.box-detail {
     display: flex;
     justify-content: center;
-    align-items: start;
+    margin: 100px 0 0 0;
 }
 
 .detail-img {
-    width: 50%;
-    height: 50%;
+    height: 100%;
+    margin: 100px; 
+    border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.smaalll {
+    height: 600px;
+    /* margin: 0 300px 0 0; */
+}
+
+.detail-body {
+    margin: 100px 0 0 0;
+}
+
+.detail-body p {
+    font-size: 20px;
+}
+
+.detail-price {
+    /* height: 30px; */
+    /* width: 30px; */
+    display: flex;
+}
+
+.detail-price h3 {
+    margin: 0 20px 0 0;
 }
 
 /*  */

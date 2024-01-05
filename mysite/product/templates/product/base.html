@@ -13,14 +13,15 @@
 <body>
     <header class="nav-container">
         <nav class="nav-menu">
-            <a href="{% url 'product:index' %}" class="nav-link">Головна сторінка</a>
-            <!-- <a href="{% url 'product:all_product' %}" class="nav-link">Усі пропозиції</a> -->
-            <a href="#" class="nav-link">Зареєструватися</a>
-            <a href="#" class="nav-link">Увійти</a>
+            <ul>
+                <li><a href="{% url 'product:index' %}" class="nav-link">Головна сторінка</a></li>
+                <li><a href="#" class="nav-link">Зареєструватися</a></li>
+                <li><a href="#" class="nav-link">Увійти</a></li>
+            </ul>
         </nav>
 
         <nav>
-            <a class="nav-button" href="{% url 'product:all_product' %}">Усі пропозиції</a>
+            <a href="{% url 'product:all_product' %}" class="nav-button">Усі пропозиції</a>
         </nav>
     </header>
 
