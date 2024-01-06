@@ -12,7 +12,7 @@ from .models import Product, Category
 
 
 def index_page(request):
-    products = Product.published.all()[:3]
+    products = Product.objects.all()[:3]
     context = {
         "product_list": products,
     }
@@ -31,6 +31,7 @@ def detail_product(request, product_slug):
     product = get_object_or_404(Product, slug=product_slug)
     return render(request, "product/detail.html", {"product": product})
 
+
 # class ProductListView(generic.ListView):
 #     model = Product
 #     queryset = Product.published.all()
@@ -40,24 +41,15 @@ def detail_product(request, product_slug):
 
 
 def product_list(request):
-    product_list = Product.published.all()
-    paginator = Paginator(product_list, 2)
-    page_number = request.GET.get("page", 1)
-    try:
-        products = paginator.page(page_number)
-    except EmptyPage:
-        # if page_number has don't diaposon, get last page
-        products = paginator.page(paginator.num_pages)
-    return render(request, "product/all_product.html", {"products": products})
+    product_list = Product.objects.all()
+    return render(request, "product/all_product.html", {"products": product_list})
 
 
 def detail_category(request, category_slug):
     """Выводит одну категорию отобраною по короткой метке (Slug)."""
     category = get_object_or_404(Category, slug=category_slug)
     products = Product.published.filter(category_id=category)
-    return render(
-        request, "product/index.html", {"category": category, "products": products}
-    )
+    return render(request, "product/index.html", {"category": category, "products": products})
 
 
 def buy_page(request, product_slug):

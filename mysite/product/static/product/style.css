@@ -174,18 +174,23 @@ body {
     text-align: center;
     padding: 12px;
     border-radius: 5px;
-}
+}   
 
 .main {
     text-align: center;
 }
 
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: #0d1216;
     color: #fff;
+}
+.box-product {
+    background: #ffffff;
+}
+.box-product img {
+    width: 100px;
 }
 
 .card-link {

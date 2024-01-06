@@ -21,51 +21,25 @@
             <a href="#" class="card-link">Дізнатися більше</a>
         </div>
     </nav>
-
     <nav>
-        <a href="" class="topic">Рекомендовано</a>
+        <a href="#" class="topic">Рекомендовано</a>
     </nav>
 
     <div class="outher">
         {% for product in product_list %}
         <div class="product-card">
-            {% if product.slug == "mi-lau-thai" %}
             <div class="card-photo">
-                <img src="{% static 'product/images/Mi Lau Thai.png' %}" alt="Mi Lau Thai" class="mi-lau-photo">
-            </div>
-            <div class="card-body">
-                <h4>{{ product.product_title }}</h4>
-                <p>Локшина швидкого приготування <br>зі смаком Креветки</p>
-                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+                <img src="{{ product.image.url }}" alt="Не работает фото" class="cung-photo">
             </div>
 
-            {% elif product.slug == "cung-dihn-green" %}
-            <div class="card-photo">
-                <img src="{% static 'product/images/cung-dihn-green.png' %}" alt="Cung-dihn-green" class="cung-photo">
-            </div>
             <div class="card-body">
                 <h4>{{ product.product_title }}</h4>
-                <p>Локшина швидкого приготування <br>зі смаком Свинини</p>
+                <p>{{ product.taste }}</p>
                 <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
             </div>
-
-            {% else %}
-            <div class="card-photo">
-                <img src="{% static 'product/images/cung-dihn-purple.png'%}" alt="Cung-dihn-purple" class="cung-photo">
-            </div>
-            <div class="card-body">
-                <h4>{{ product.product_title }}</h4>
-                <p >Локшина швидкого приготування <br>зі смаком Яловичини</p>
-                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
-            </div>
-            {% endif %}
         </div>
         {% endfor %}
     </div>
 
     <a id="all_product" href="{% url 'product:all_product' %}" class="card-link">ПЕРЕГЛЯНУТИ УСІ ПРОПОЗИЦІЇ</a>
-
-    <!-- <div class="review-container">
-
-    </div> -->
     {% endblock content %}

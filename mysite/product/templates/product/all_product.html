@@ -4,51 +4,21 @@
 {% block title %}Усі пропозиції{% endblock title %}
 
 {% block content %}
-    <div class="box">
+    <div class="container_products">
         {% for product in products %}
-            <h1>{{ product.product_title }}</h1>
-            <img src="{% static 'product/images/Mi Lau Thai2.png' %}" alt="Mi Lau Thai" class="menu-image">
-            <div class="menu-content">
-                <p>{{ product.description|linebreaks }}</p>
-                <a href="{{ product.get_absolute_url }}" class="button-link">
-                    Цена за шт: {{ product.price }}₴</p>
-                </a>
-            <hr>
+        <div class="box-product">
+            <div class="card-photo">
+                <img src="{{ product.image.url }}" alt="Mi Lau Thai" class="mi-lau-photo">
             </div>
 
-            {% if product.slug == "mi-lau-thai" %}
-            <div class="card-photo">
-                <img src="{% static 'product/images/Mi Lau Thai.png' %}" alt="Mi Lau Thai" class="mi-lau-photo">
-            </div>
             <div class="card-body">
                 <h4>{{ product.product_title }}</h4>
-                <p>Локшина швидкого приготування <br>зі смаком Креветки</p>
+                <p>{{ product.taste }}</p>
                 <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
             </div>
-
-            {% elif product.slug == "cung-dihn-green" %}
-            <div class="card-photo">
-                <img src="{% static 'product/images/cung-dihn-green.png' %}" alt="Cung-dihn-green" class="cung-photo">
-            </div>
-            <div class="card-body">
-                <h4>{{ product.product_title }}</h4>
-                <p>Локшина швидкого приготування <br>зі смаком Свинини</p>
-                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
-            </div>
-
-            {% else %}
-            <div class="card-photo">
-                <img src="{% static 'product/images/cung-dihn-purple.png'%}" alt="Cung-dihn-purple" class="cung-photo">
-            </div>
-            <div class="card-body">
-                <h4>{{ product.product_title }}</h4>
-                <p >Локшина швидкого приготування <br>зі смаком Яловичини</p>
-                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
-            </div>
-
-            {% endif %}
-        {% endfor %}
-
+            
+        </div>
+        {% endfor %} 
 
     </div>
     {% include "product/pagination.html" with page=products %}
