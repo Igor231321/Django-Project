@@ -1,0 +1,12 @@
+{% extends "product/base.html" %}
+{% load static %}
+
+{% block content %}
+<a href="{{ category.get_absolute_url }}">text</a>
+
+<h2>Рубрика: {{ category.name }}</h2>
+{% for product in products %}
+    <p>{{ product.product_title }}</p>
+
+{% endfor %}
+{% endblock %}

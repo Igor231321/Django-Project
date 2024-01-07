@@ -1,0 +1,49 @@
+{% extends "product/base.html" %}
+{% load static %}
+
+{% block title %}{{ product.product_title }}{% endblock title %}
+
+{% block content %}
+<div class="box-detail">
+    {% if product.slug == "mi-lau-thai" %}
+    <div class="detail-img">
+        <img src="{% static 'product/images/Mi Lau Thai.png' %}" alt="Mi Lau Thai" class="smaalll">
+    </div>
+    <div class="detail-body">
+        <h1>{{ product.product_title }}</h1>
+        <hr>
+        <div class="detail-price">
+            <h3>Ціна {{ product.price }} грн</h3>
+            <h3>Кількість<input type="number" id="qty" min="1" value="1" title="Количество"></h3>
+            <input type="number" id="qty" min="1" value="1" title="Количество">
+            
+        </div>
+
+        <hr>
+        <p>Локшина швидкого приготування <br>зі смаком Свинини</p>
+        <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+    </div>
+
+    <!-- {% elif product.slug == "cung-dihn-green" %}
+        <div class="card-photo">
+            <img src="{% static 'product/images/cung-dihn-green.png' %}" alt="Cung-dihn-green" class="cung-photo">
+        </div>
+        <div class="card-body">
+            <h4>{{ product.product_title }}</h4>
+            <p>Локшина швидкого приготування <br>зі смаком Свинини</p>
+            <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+        </div> -->
+
+    {% else %}
+    <div class="card-photo">
+        <img src="{% static 'product/images/cung-dihn-purple.png'%}" alt="Cung-dihn-purple" class="smaalll">
+    </div>
+    <div class="card-body">
+        <h4>{{ product.product_title }}</h4>
+        <p>Локшина швидкого приготування <br>зі смаком Яловичини</p>
+        <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+    </div>
+
+    {% endif %}
+</div>
+{% endblock content %}

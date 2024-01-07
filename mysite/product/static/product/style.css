@@ -1,0 +1,281 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E3E6E6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Верхняя нав. панель */
+.nav-container {
+    height: 80px;
+    background-color: #54181f;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav-menu {
+    margin: 0 0 0 450px;
+    padding: 15px 0 0 0;
+    align-items: center;
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+.nav-menu ul li a {
+    margin: 0 50px 0 0;
+    transition: all 0.5s;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    align-items: center;
+    /* display: flex; */
+
+}
+/* .nav-link {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    margin: 0 100px 0 0;
+    transition: all 0.5s;
+} */
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-button {
+    display: inline-block;
+    width: 200px;
+    text-decoration: none;
+    transition: all 0.5s;
+    border: 2px solid #ffffff;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+    margin: 18px 200px 0 0;
+}
+
+.nav-button:hover {
+    color: #54181f;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    /* font-weight: bold; */
+}
+
+
+/*Заголовок сайта*/
+
+.topic-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    background-color: #2f322c;
+    background: linear-gradient(90deg, rgba(130,130,130,1) 0%, rgba(189,189,189,1) 45%, rgba(255,255,255,1) 100%);
+}
+
+.topic-text {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 50px 0 50px;
+    height: 300px;
+    width: 50%;
+}
+
+.topic-img {
+    margin: 0 50px 0 50px;
+}
+
+.topic {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000 !important;
+    width: 300px;
+    margin: 50px 0 20px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid #54181f;
+    font-size: 23px;
+}
+
+/* Основа сайта */
+.outher {
+    margin: 50px;
+}
+
+/* Photo on site */
+.mi-lau-photo {
+    width: 100%;
+    height: 100%;
+}
+
+.cung-photo {
+    width: 75%;
+    height: 100%;
+    padding: 20px 15px 10px 15px;
+}
+
+.card-photo {
+    width:100%;
+    height: 60%;
+}
+
+/* Text on card */
+.product-card {
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    background-color: #ffffff;
+    margin: 0px 10px 15px 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.card-body{
+    display: inline-block;
+    height: 40%;
+}
+
+.card-body h4 {
+    padding: 5px 0 0 0;
+    color: #000000;
+    /* font-family: 'Oswald', sans-serif; */
+    /* font-weight: 900; */
+}
+
+.card-body p {
+    text-align: center;
+    font-family: verdana;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    margin: 40px 0 35px 0;
+}
+
+#all_product {
+    height: 50px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+}   
+
+.main {
+    text-align: center;
+}
+
+.container_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #0d1216;
+    color: #fff;
+}
+.box-product {
+    background: #ffffff;
+}
+.box-product img {
+    width: 100px;
+}
+
+.card-link {
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    margin: 15px;
+    padding: 5px 0 5px 0;
+    font-weight: 550;
+    border: 1px solid #000000;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.card-link:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    font-weight: 550;
+}
+
+.box-text {
+    display: inline-block;
+    font-size: 20px;
+    color: #ffffff;
+    width: 400px;
+    /* background-color: #3c4a58; */
+    margin: 20px;
+    padding: 30px;
+}
+
+.box-detail {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 0 0;
+}
+
+.detail-img {
+    height: 100%;
+    margin: 100px; 
+    border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.smaalll {
+    height: 600px;
+    /* margin: 0 300px 0 0; */
+}
+
+.detail-body {
+    margin: 100px 0 0 0;
+}
+
+.detail-body p {
+    font-size: 20px;
+}
+
+.detail-price {
+    /* height: 30px; */
+    /* width: 30px; */
+    display: flex;
+}
+
+.detail-price h3 {
+    margin: 0 20px 0 0;
+}
+
+/*  */
+footer {
+    /* background-color: #0d1216; */
+    width: 100%;
+    min-height: 60px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.block {
+    /* background-color: rgb(223, 255, 127); */
+    background: url("https://www.kfc-ukraine.com/admin/files/medium/medium_4296.jpg") fixed;
+    /* background: linear-gradient(to right, #f79431 0%,#ffd930 0%,#ed7600c4 100%); */
+    border-radius: 15px;
+    height: 1000px;
+    margin: 30px;
+    box-shadow: 0 0 10px rgb(58, 58, 58);
+}

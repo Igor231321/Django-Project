@@ -1,0 +1,17 @@
+{% extends "product/base.html" %}
+
+{% block title %}
+    product_title
+{% endblock title %} 
+
+
+{% block content %}
+    <form method="post">
+        {% crsf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit">
+            BUY
+        </button>
+    </form>
+{% endblock content %}
+

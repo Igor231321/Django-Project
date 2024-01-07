@@ -1,0 +1,26 @@
+{% extends "product/base.html" %}
+{% load static %}
+
+{% block title %}Усі пропозиції{% endblock title %}
+
+{% block content %}
+    <div class="container_products">
+        {% for product in products %}
+        <div class="box-product">
+            <div class="card-photo">
+                <img src="{{ product.image.url }}" alt="Mi Lau Thai" class="mi-lau-photo">
+            </div>
+
+            <div class="card-body">
+                <h4>{{ product.product_title }}</h4>
+                <p>{{ product.taste }}</p>
+                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+            </div>
+            
+        </div>
+        {% endfor %} 
+
+    </div>
+    {% include "product/pagination.html" with page=products %}
+
+{% endblock %}

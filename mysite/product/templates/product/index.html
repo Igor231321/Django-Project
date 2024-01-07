@@ -1,0 +1,45 @@
+{% extends "product/base.html" %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock title %}
+
+{% block content %}
+<main class="main">
+    <nav class="topic-menu">
+        <div class="topic-img">
+            <img src="{% static 'product/images/sp-CD-mi.png' %}" alt="menu">
+        </div>
+
+        <div class="topic-text">
+            <h2>Королевская лапша</h2>
+            <p>
+                Картофельная лапша CUNG DINH изготавливается из картофеля высшего сорта, выращенного на пышных зеленых
+                картофельных полях. Лапша естественно золотистого цвета, не острая и имеет уникальное ощущение жевания и
+                хрустящей корочки при употреблении в пищу. В частности, картофельная лапша «Кунг Динь» дополнена
+                соком...
+            </p>
+            <a href="#" class="card-link">Дізнатися більше</a>
+        </div>
+    </nav>
+    <nav>
+        <a href="#" class="topic">Рекомендовано</a>
+    </nav>
+
+    <div class="outher">
+        {% for product in product_list %}
+        <div class="product-card">
+            <div class="card-photo">
+                <img src="{{ product.image.url }}" alt="Не работает фото" class="cung-photo">
+            </div>
+
+            <div class="card-body">
+                <h4>{{ product.product_title }}</h4>
+                <p>{{ product.taste }}</p>
+                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a id="all_product" href="{% url 'product:all_product' %}" class="card-link">ПЕРЕГЛЯНУТИ УСІ ПРОПОЗИЦІЇ</a>
+    {% endblock content %}
