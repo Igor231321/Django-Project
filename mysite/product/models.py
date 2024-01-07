@@ -13,7 +13,7 @@ class Product(models.Model):
         PUBLISHED = 1, 'Опубликовано'
         
     product_title = models.CharField("Название товара", max_length=255)
-    taste = models.CharField(max_length=255, blank=True, verbose_name="Краткое описание вкуса лапши",)
+    taste = models.TextField(max_length=255, blank=True, verbose_name="Краткое описание вкуса лапши",)
     slug = models.SlugField("Короткая метка", max_length=255, blank=True, unique=True, db_index=True)
     description = models.TextField("Описание товара")
     ingredients = models.TextField("Ингридиенты")

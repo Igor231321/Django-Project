@@ -4,23 +4,46 @@
 {% block title %}Усі пропозиції{% endblock title %}
 
 {% block content %}
+<div class="main-container">
+
+    <div class="left-bar">
+        <ul>
+            <li>Рекомендовано</li>
+            <li>Твістери</li>
+            <li>Бургери</li>
+            <li>Бакети</li>
+            <li>Соковита курка</li>
+            <li>Картопля та снеки</li>
+            <li>Соуси</li>
+            <li>Холодні напої</li>
+            <li>Гарячі напої</li>
+            <li>Морозиво</li>
+            <li>Десерти</li>
+            <li>Мілкшейк</li>
+        </ul>
+    </div>
+
+
     <div class="container_products">
         {% for product in products %}
         <div class="box-product">
-            <div class="card-photo">
+            <div class="products-photo">
                 <img src="{{ product.image.url }}" alt="Mi Lau Thai" class="mi-lau-photo">
             </div>
 
-            <div class="card-body">
+            <div class="products-body">
                 <h4>{{ product.product_title }}</h4>
-                <p>{{ product.taste }}</p>
-                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+                <p>{{ product.taste|linebreaks }}</p>
+                <a href="{{ product.get_absolute_url }}" class="card-link small-button">{{ product.price }} ₴</a>
             </div>
-            
         </div>
-        {% endfor %} 
-
+        {% endfor %}
     </div>
-    {% include "product/pagination.html" with page=products %}
+
+
+    <div class="right-bar">
+        Кошик
+    </div>
+</div>
 
 {% endblock %}

@@ -34,7 +34,7 @@
 
             <div class="card-body">
                 <h4>{{ product.product_title }}</h4>
-                <p>{{ product.taste }}</p>
+                <p>{{ product.taste|linebreaks }}</p>
                 <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
             </div>
         </div>

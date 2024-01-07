@@ -1,0 +1,34 @@
+.box-detail {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 0 0;
+}
+
+.detail-img {
+    height: 100%;
+    margin: 100px; 
+    border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.smaalll {
+    height: 600px;
+    /* margin: 0 300px 0 0; */
+}
+
+.detail-body {
+    margin: 100px 0 0 0;
+}
+
+.detail-body p {
+    font-size: 20px;
+}
+
+.detail-price {
+    /* height: 30px; */
+    /* width: 30px; */
+    display: flex;
+}
+
+.detail-price h3 {
+    margin: 0 20px 0 0;
+}

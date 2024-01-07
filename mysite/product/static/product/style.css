@@ -6,7 +6,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: #E3E6E6;
+    /* background-color: #fff; */
 }
 
 * {
@@ -79,9 +79,7 @@ body {
     /* font-weight: bold; */
 }
 
-
 /*Заголовок сайта*/
-
 .topic-menu {
     display: flex;
     align-items: center;
@@ -117,12 +115,15 @@ body {
 
 /* Основа сайта */
 .outher {
+    justify-content: center;
     margin: 50px;
+    gap: 20px; /* Пространство между карточками */
+    grid-template-columns: repeat(3, 400px);
+    display: grid;
 }
 
 /* Photo on site */
 .mi-lau-photo {
-    width: 100%;
     height: 100%;
 }
 
@@ -156,7 +157,6 @@ body {
 .card-body h4 {
     padding: 5px 0 0 0;
     color: #000000;
-    /* font-family: 'Oswald', sans-serif; */
     /* font-weight: 900; */
 }
 
@@ -164,33 +164,12 @@ body {
     text-align: center;
     font-family: verdana;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
     color: black;
     margin: 40px 0 35px 0;
-}
-
-#all_product {
-    height: 50px;
-    text-align: center;
-    padding: 12px;
-    border-radius: 5px;
-}   
+}  
 
 .main {
     text-align: center;
-}
-
-.container_products {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: #0d1216;
-    color: #fff;
-}
-.box-product {
-    background: #ffffff;
-}
-.box-product img {
-    width: 100px;
 }
 
 .card-link {
@@ -216,52 +195,6 @@ body {
     font-weight: 550;
 }
 
-.box-text {
-    display: inline-block;
-    font-size: 20px;
-    color: #ffffff;
-    width: 400px;
-    /* background-color: #3c4a58; */
-    margin: 20px;
-    padding: 30px;
-}
-
-.box-detail {
-    display: flex;
-    justify-content: center;
-    margin: 100px 0 0 0;
-}
-
-.detail-img {
-    height: 100%;
-    margin: 100px; 
-    border: 2px solid rgba(0, 0, 0, 0.15);
-}
-
-.smaalll {
-    height: 600px;
-    /* margin: 0 300px 0 0; */
-}
-
-.detail-body {
-    margin: 100px 0 0 0;
-}
-
-.detail-body p {
-    font-size: 20px;
-}
-
-.detail-price {
-    /* height: 30px; */
-    /* width: 30px; */
-    display: flex;
-}
-
-.detail-price h3 {
-    margin: 0 20px 0 0;
-}
-
-/*  */
 footer {
     /* background-color: #0d1216; */
     width: 100%;
@@ -270,12 +203,11 @@ footer {
     text-align: center;
 }
 
-.block {
-    /* background-color: rgb(223, 255, 127); */
+/* .block {
     background: url("https://www.kfc-ukraine.com/admin/files/medium/medium_4296.jpg") fixed;
-    /* background: linear-gradient(to right, #f79431 0%,#ffd930 0%,#ed7600c4 100%); */
+    background: linear-gradient(to right, #f79431 0%,#ffd930 0%,#ed7600c4 100%);
     border-radius: 15px;
     height: 1000px;
     margin: 30px;
     box-shadow: 0 0 10px rgb(58, 58, 58);
-}
+} */
