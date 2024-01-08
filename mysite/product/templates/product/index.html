@@ -18,11 +18,11 @@
                 хрустящей корочки при употреблении в пищу. В частности, картофельная лапша «Кунг Динь» дополнена
                 соком...
             </p>
-            <a href="#" class="card-link">Дізнатися більше</a>
+            <a href="#" class="button">Дізнатися більше</a>
         </div>
     </nav>
     <nav>
-        <a href="#" class="topic">Рекомендовано</a>
+        <h2 href="#" class="topic">Рекомендовано</h2>
     </nav>
 
     <div class="outher">
@@ -35,7 +35,7 @@
             <div class="card-body">
                 <h4>{{ product.product_title }}</h4>
                 <p>{{ product.taste|linebreaks }}</p>
-                <a href="{{ product.get_absolute_url }}" class="card-link">{{ product.price }} ₴</a>
+                <a href="{{ product.get_absolute_url }}" class="button card-link">{{ product.price }} ₴</a>
             </div>
         </div>
         {% endfor %}
